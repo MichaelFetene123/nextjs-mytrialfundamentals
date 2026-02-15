@@ -1,5 +1,5 @@
 import React from 'react'
-import { cn } from '@/app/lib/utils'
+import { cn } from '@/lib/utils'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
@@ -44,7 +44,7 @@ export default function Button({
         variants[variant],
         sizes[size],
         isLoading && 'opacity-70 cursor-not-allowed',
-        className
+        className,
       )}
       disabled={disabled || isLoading}
       {...props}
